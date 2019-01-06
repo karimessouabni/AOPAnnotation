@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Build') {
            withMaven() {
-             bat "mvn clean install"
+             sh "./mvnw clean deploy"
            }
         }
         stage('Test') {
