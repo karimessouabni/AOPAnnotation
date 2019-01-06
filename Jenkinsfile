@@ -6,9 +6,9 @@ pipeline {
     }
     stages {
         stage('Build') {
-           withMaven() {
-             sh "./mvnw clean deploy"
-           }
+            steps {
+             sh 'mvn clean install'
+            }
         }
         stage('Test') {
             steps {
